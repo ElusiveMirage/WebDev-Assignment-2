@@ -49,12 +49,12 @@ const Header = () => {
             onRequestClose={() => setModalIsOpen(false)}
             style={customStyles} >
             <h1>Welcome to Dog Fun <BsHouse /></h1>
-            <h2>hi, wrote this simple Web App for cat lovers. hope you like it.</h2>
+            <h2>A simple Web App for dog lovers that displays a random assortment of cute doggo pics.</h2>
             <hr></hr>
-            <h2>Author:  Abel Choy</h2>
-            <h2>Contact: abelchoy@gmail.com</h2>
+            <h2>Author: Javier Tan</h2>
+            <h2>Contact: jjjtan011@mymail.sim.edu.sg</h2>
             <p>Software: ReactJS REST-API</p>
-            <p>Version: 1.0 Aug 2020</p>
+            <p>Github link: https://github.com/ElusiveMirage/WebDev-Assignment-2</p>
             <p>Credit Images: https://dog.ceo/dog-api/</p>
             <div>
             <button className='btn' onClick={() => setModalIsOpen(false)}>Close</button>

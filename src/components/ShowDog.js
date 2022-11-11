@@ -13,11 +13,17 @@ const ShowDog = () => {
         console.log('Got the data', data );
 
      return (    data.trans.message.map( dog => (
-
-            <div key={dog.id} >
-
-                <img className='image' src= { dog } alt='dog img' />
-
+            <div className='flip-card'>
+                <div className='card-inner'>
+                    <div className='card-front'>
+                        <img key={dog.id} className='image' src= { dog } alt='dog img' />
+                    </div>
+                    
+                    <div className='card-back'>
+                        <h1>Doggo</h1>
+                        <p>This is a cute doggo</p>
+                    </div>
+                </div>
             </div>
           )
      )

@@ -1,7 +1,7 @@
 import React,  { useState, useEffect } from 'react';
 import axios from 'axios'; 
 
-const Resource  = ( { path,  render  }    ) => {
+const Resource  = ( { path }) => {
 
     const initialState = {
         trans:[],
@@ -31,8 +31,7 @@ const Resource  = ( { path,  render  }    ) => {
             
             console.log('error in get data', error.message)
         }
-
-
+        
     }   
 
 
@@ -41,17 +40,6 @@ const Resource  = ( { path,  render  }    ) => {
         getData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-
-    return (
-
-        <div  className='showlist'>
-            
-
-          {   render( state )  } 
-
-        </div>
-    )
 }
 
 export default Resource 

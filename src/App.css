@@ -28,12 +28,11 @@ body {
 
 .Modal {
   width: 50%;
-  height: 35%;
+  height: 40%;
   margin: auto;
   padding-left: 10px;
   background-color: #264653;
   transform: translate(0, 50%);
-  z-index: 1
 }
 
 .container {
@@ -50,19 +49,19 @@ body {
   justify-content: flex-end;
 } */
 .title{
-  font-family: 'Happy Monkey', cursive, 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Arial', sans-serif;
   color: #6b8fd1;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  justify-self: center;
+  margin-bottom: 5rem;
   font-size: 2rem;
 }
 
 p { 
-  font-family: 'Happy Monkey', cursive;
-  color:  whitesmoke;
-  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  color:  #6b8fd1;
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -96,6 +95,7 @@ p {
   margin-bottom: 1rem;
 
 }
+
 #startShow  {
   font-size: 1.5rem;
   line-height: 1;
@@ -110,9 +110,13 @@ p {
   0%   {left: -1000px;}
   25% { left: 300px}
   50% {left: -300px;}
-  100% {left: 0px;}
+  100% {left: 25px;}
 }
 
+@keyframes card-flyin {
+  0%   {left: -500px;}
+  100% {left: 0px;}
+}
 
 .btn {
   display: inline-block;
@@ -131,19 +135,48 @@ p {
   color: #FFEB11;
 }
 
+#options {
+  display: flex;
+  position: absolute;
+  float: left;
+  margin-left: 12%;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#breed-filter {
+  position: relative;
+  max-height: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#change-number {
+  position: relative;
+  max-height: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 .showlist {
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.1rem; 
+  grid-gap: 1rem; 
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
-  
+  margin-bottom: 50px;
+  z-index: -1;
 }
 
 .flip-card {
+  position: relative;
   background-color: transparent;
   width: 30%;
   height: 30%;
@@ -153,7 +186,12 @@ p {
   margin: 0.5rem;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-  z-index: -1;
+  justify-content: center;
+  align-items: center;
+  animation: card-flyin;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 
 .card-inner {
@@ -190,6 +228,9 @@ p {
 }
 
 .card-back p {
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin-top: 20%;
 }
@@ -203,6 +244,42 @@ p {
   margin: 0.5rem;
 } 
 
+.pagination{
+  display: flex;
+  position: relative;
+  margin: auto;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.page-item > a {
+  text-align: center;
+  color: #1186e6;
+  background-color: #ffffff;
+  float: left;
+  padding: 8px 20px;
+  line-height: 1.5;
+  border: 1px solid #ddd;
+  margin-left: 5px;
+  align-items: center;
+  letter-spacing: 0.01071em;
+  border-radius: 16px;
+  border: 0.3px solid;
+  line-height: 1.43;
+  font-size: 13px;
+  min-width: 32px;
+}
+
+.page-item > a:hover {
+  color: #fff;
+  background-color: #1186e6;
+  border-color: #1186e6;
+}
 
 @media (max-width: 992px) {
   .showlist {
@@ -259,4 +336,5 @@ p {
 }
 
 }
+
 

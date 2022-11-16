@@ -8,11 +8,7 @@ function refreshPage() {
     window.location.reload();
   }
 
-
-
 Modal.setAppElement('#root');
-
-
 
 const Header = () => {
 
@@ -21,7 +17,7 @@ const Header = () => {
     return (
         <>
         <div className='title' id='startShow'>
-            <h1 >Fun Dogs  <BsHouse /> </h1>
+            <h1 >Dog House  <BsHouse /> </h1>
         </div>
 
         <div id='navbar'>
@@ -31,7 +27,7 @@ const Header = () => {
                     <li href='#'><button className='btn' onClick={() => setModalIsOpen(true)}>info</button></li>
                 </ul>
             </div>
-
+        
         <Modal
             isOpen={modalIsOpen}
             onRequestClose={() => setModalIsOpen(false)}

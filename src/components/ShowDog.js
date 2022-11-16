@@ -1,18 +1,12 @@
-import React from 'react'; 
+import React, { useState } from 'react';
 
-import Resource from './Resource'; 
+const ShowDog = ({ data, loading }) => {
+    
+    const render = ( data, loading ) => {
 
-const ShowDog = () => {
+        if (loading === true ) return (<p>loading ...</p>)
 
-    const webURL = 'https://dog.ceo/api/breeds/image/random/15'
-
-    const render = ( data ) => {
-
-        if ( data.loading === true ) return <p>loading ...</p>
-
-        console.log('Got the data', data );
-
-     return (    data.trans.message.map( dog => (
+     return (    data.map( dog => (
             <div className='flip-card'>
                 <div className='card-inner'>
                     <div className='card-front'>
@@ -36,9 +30,15 @@ const ShowDog = () => {
     return (
         <div>
 
-            <Resource path={ webURL  } render={ render } />
+            <div  className='showlist'>
+            
+            {   render( data, loading )  } 
+  
+            </div>
 
         </div>
+
+
     )
 }
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 import { BsHouse } from 'react-icons/bs';
+import { GiSittingDog } from 'react-icons/gi';
+import { GiDogHouse } from 'react-icons/gi';
 
 import  Modal  from 'react-modal'
 
@@ -17,7 +19,7 @@ const Header = () => {
     return (
         <>
         <div className='title' id='startShow'>
-            <h1 >Dog House  <BsHouse /> </h1>
+            <h1 > <GiSittingDog /> Dog House  <GiDogHouse /> </h1>
         </div>
 
         <div id='navbar'>

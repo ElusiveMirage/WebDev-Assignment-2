@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Pagination = ({ imagesPerPage, totalImages, paginate }) => {
+const Pagination = ({ imagesPerPage, totalImages, paginate, loading}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalImages / imagesPerPage); i++) {
     pageNumbers.push(i);
   }
+
+  if(loading === true) return (null)
 
   return (
     <nav>

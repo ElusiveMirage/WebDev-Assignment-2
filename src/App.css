@@ -96,6 +96,82 @@ p {
 
 }
 
+.loader-container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  padding-top: 40%;
+}
+
+.dog-sprite {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
+  margin: 0 -5%;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.dots {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #6b8fd1;
+  color: #6b8fd1;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dots::before, .dots::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dots::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #6b8fd1;
+  color: #6b8fd1;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dots::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #6b8fd1;
+  color: #6b8fd1;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #6b8fd1;
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
 #startShow  {
   font-size: 1.5rem;
   line-height: 1;
@@ -121,7 +197,7 @@ p {
 .btn {
   display: inline-block;
   border: none;
-  background: var(--primary-color);
+  background: #6b8fd1;
   color: #fff;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;

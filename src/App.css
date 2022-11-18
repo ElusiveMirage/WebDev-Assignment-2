@@ -194,6 +194,11 @@ p {
   100% {left: 0px;}
 }
 
+hr {
+  border: 1px solid #6b8fd1;
+  margin-bottom: 20px;
+}
+
 .btn {
   display: inline-block;
   border: none;

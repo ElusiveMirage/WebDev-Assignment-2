@@ -50,7 +50,6 @@ const ShowDog = ({ data, loading }) => {
 
     return (
         <div>
-
             <div  className='showlist'>
             
             {   render( data, loading )  } 

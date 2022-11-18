@@ -78,6 +78,8 @@ const App = () => {
             </select>
         </div>      
 
+      <hr></hr>
+      
       <Pagination imagesPerPage={imagesPerPage} totalImages={pageData.length} paginate={paginate} loading={loading}/>
 
       <ShowDog data={ currentImages } loading={loading}/> 
